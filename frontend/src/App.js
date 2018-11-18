@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import HomePage from './HomePage'
 import CreateSession from './CreateSession'
 import JoinSession from './JoinSession'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUsers } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faUsers)
 
 class App extends Component {
   state = {
-    componentToShow: 'homepage'
+    componentToShow: 'joinSession'
   }
 
   startJourney = componentToShow => this.setState({ componentToShow })
