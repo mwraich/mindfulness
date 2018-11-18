@@ -7,7 +7,7 @@ const theme = {
       brand: '#00C781'
     },
     font: {
-      family: 'Roboto',
+      family: 'Poppins',
       size: '20px'
     },
   },
@@ -16,7 +16,7 @@ const theme = {
 class CategoryButton extends Component {
     render(){
         return (
-            <Grommet theme={theme} full>
+            <Grommet theme={theme}>
               <h3
                 style={{
                   paddingTop: "55px",
