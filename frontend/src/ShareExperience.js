@@ -14,7 +14,14 @@ const theme = {
 };
 
 class ShareExperience extends Component {
+  state = {
+    isSharedExperience: null,
+  }
+
+  setExperienceType = (isSharedExperience) => this.setState({ isSharedExperience })
+
     render(){
+      const { isSharedExperience } = this.state
         return (
             <Grommet theme={theme}>
             <h3
@@ -35,8 +42,10 @@ class ShareExperience extends Component {
             <Button
               label="Yes"
               style={{
-                width: "115px"
+                width: "115px",
+                backgroundColor: isSharedExperience === 'yes' ? '#6194EB': '' 
               }}
+              onClick={() => this.setExperienceType('yes')}
             />
           <div
             style={{
@@ -47,8 +56,10 @@ class ShareExperience extends Component {
             <Button
               label="No"
               style={{
-                width: "115px"
+                width: "115px",
+                backgroundColor: isSharedExperience === 'no' ? '#6194EB': '' 
               }}
+              onClick={() => this.setExperienceType('no')}
             />
           </div>
             </ Grommet >

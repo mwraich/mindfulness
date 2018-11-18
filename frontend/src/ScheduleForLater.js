@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grommet, Box, Button } from 'grommet';
+import { Grommet, Box, Button, Clock } from 'grommet';
 import { Up } from 'grommet-icons';
 
 const theme = {
@@ -19,8 +19,7 @@ class ScheduleForLater extends Component {
         return (
             <Grommet theme={theme}>
             <Box align="center" border="grey">
-              Time
-              05: 30 PM
+              <Clock type="digital" />
               <Button icon={<Up />}/>
             </Box>
             <Box background="grey" align="center">

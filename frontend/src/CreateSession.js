@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Grommet, Box, Button } from 'grommet';
 import CategoryButton from './CategoryButtons';
+import ProductSelecta from './ProductSelecta'
 import ShareExperience from './ShareExperience';
 import StartNow from './StartNow';
 import ScheduleForLater from './ScheduleForLater';
@@ -22,6 +23,7 @@ class CreateSession extends Component {
       return(
         <React.Fragment>
             <CategoryButton/>
+            <ProductSelecta />
             <ShareExperience/>
             <StartNow/>
             <ScheduleForLater/>

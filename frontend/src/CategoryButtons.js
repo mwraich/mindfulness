@@ -14,7 +14,14 @@ const theme = {
 };
 
 class CategoryButton extends Component {
+    state = {
+      selectedCategory: null,
+    }
+
+    selectCategory = (selectedCategory) => this.setState({ selectedCategory })
+
     render(){
+      const { selectedCategory } = this.state
         return (
             <Grommet theme={theme}>
               <h3
@@ -34,8 +41,10 @@ class CategoryButton extends Component {
               <Button
                 label="MBCT"
                 style={{
-                  width: "115px"
+                  width: "115px",
+                  backgroundColor: selectedCategory === 'MBCT' ? '#6194EB': '' 
                 }}
+                onClick={() => this.selectCategory('MBCT')}
               />
             <div
               style={{
@@ -46,8 +55,11 @@ class CategoryButton extends Component {
               <Button
                 label="MBSR"
                 style={{
+                  backgroundColor: selectedCategory === 'MBSR' ? '#6194EB': '', 
                   width: "115px"
+                  
                 }}
+                onClick={() => this.selectCategory('MBSR')}
               />
             </div>
 

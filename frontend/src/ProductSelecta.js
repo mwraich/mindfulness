@@ -14,16 +14,25 @@ const programList = [
 
 ]
 
-const Program = () => (
+const Program = (props) => (
     <div>
-        {programList.map( (program, index) => <p style={{
+        {programList.map( (program, index) => <p 
+        onClick={() => props.selectProduct(`${program} ${index}`)}
+        style={{
             padding: '0.5em'
         }} >{program} {index + 1}</p>)}
     </div>
 )
 
 class ProductSelecta extends Component {
+
+    state = {
+        selectedProduct: 'Choose a mediation',
+      }
+  
+      selectProduct = (selectedProduct) => this.setState({ selectedProduct })
     render(){
+        const { selectedProduct } = this.state
         return (
             <div style={{
                 display: 'flex',
@@ -33,8 +42,8 @@ class ProductSelecta extends Component {
             }} >
             <DropButton
             dropAlign={{top: "bottom", left: "left"}}
-            dropContent={<Program />}
-            label="Choose a mediation"
+            dropContent={<Program selectProduct={this.selectProduct}  />}
+            label={selectedProduct}
             style={{
                 left: '50% '
             }}
