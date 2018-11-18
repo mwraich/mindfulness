@@ -10,7 +10,7 @@ library.add(faUsers)
 
 class App extends Component {
   state = {
-    componentToShow: 'joinSession'
+    componentToShow: 'homepage'
   }
 
   startJourney = componentToShow => this.setState({ componentToShow })
