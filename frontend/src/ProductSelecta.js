@@ -2,16 +2,12 @@ import React, { Component } from 'react'
 import { DropButton } from 'grommet'
 
 const programList = [
-    'Option',
-    'Option',
-    'Option',
-    'Option',
-    'Option',
-    'Option',
-    'Option',
-    'Option',
-    'Option',
-
+  "Three-Minute Breathing Space",
+  "Awareness of Breathing - Lying & Sitting (20 mins)",
+  "Awareness of Breathing (10 mins)",
+  "Body Scan (40 mins)",
+  "Breath, Body, Sounds, Thoughts, Emotions (30 mins)",
+  "Mindful Movement (35 mins)",
 ]
 
 const Program = (props) => (
