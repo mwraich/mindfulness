@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Grommet, Box, Button } from 'grommet';
 import { User } from 'grommet-icons';
-
 import logo from './logo.jpg'
 
 const theme = {
@@ -37,7 +36,9 @@ class HomePage extends Component {
       <Box fill>
           <AppBar>
             <img src={logo} alt="User" width="150" height="90" />
-          <Button icon={<User />}/>
+          <Button icon={<User />}
+            onClick={() => this.props.startJourney('profile')}
+            />
           </AppBar>
 
         <Box

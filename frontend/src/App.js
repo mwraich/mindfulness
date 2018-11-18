@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import HomePage from './HomePage'
 import CreateSession from './CreateSession'
 import JoinSession from './JoinSession'
+import Profile from './Profile'
 
 class App extends Component {
   state = {
@@ -9,7 +10,7 @@ class App extends Component {
   }
 
   startJourney = componentToShow => this.setState({ componentToShow })
-  
+
   render() {
     const { componentToShow } = this.state
     return (
@@ -17,6 +18,7 @@ class App extends Component {
         { componentToShow === 'homepage' && <HomePage startJourney={this.startJourney} /> }
         { componentToShow === 'createSession' && <CreateSession/> }
         { componentToShow === 'joinSession' && <JoinSession/> }
+        { componentToShow === 'profile' && <Profile/> }
       </div>
 
     )
@@ -24,4 +26,3 @@ class App extends Component {
 }
 
 export default App;
-
