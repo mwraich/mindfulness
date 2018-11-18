@@ -3,6 +3,8 @@ import { Grommet, Box, Button } from 'grommet';
 import CategoryButton from './CategoryButtons';
 import ShareExperience from './ShareExperience';
 import StartNow from './StartNow';
+import ScheduleForLater from './ScheduleForLater';
+
 const theme = {
   global: {
     colors: {
@@ -22,6 +24,7 @@ class CreateSession extends Component {
             <CategoryButton/>
             <ShareExperience/>
             <StartNow/>
+            <ScheduleForLater/>
         </React.Fragment>
         )
     }
