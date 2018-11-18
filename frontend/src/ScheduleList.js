@@ -4,28 +4,32 @@ import JoinSessionButton from './JoinSessionButton'
 
 const schedule = [
     {
-        name: 'Activity 1',
+        name: 'Awareness of Breathing - Lying & Sitting',
         classTime: 20,
         startTime: '5:30 pm',
-        classSize: 20
+        classSize: 17,
+        user: "Arel"
     },
     {
-        name: 'Activity 2',
-        classTime: 20,
+        name: 'Body Scan',
+        classTime: 40,
         startTime: '6:30 pm',
-        classSize: 20
+        classSize: 6,
+        user: "Cindy"
     },
     {
-        name: 'Activity 3',
-        classTime: 20,
+        name: 'Breath, Body, Sounds, Thoughts, Emotions',
+        classTime: 3,
         startTime: '7:30 pm',
-        classSize: 20
+        classSize: 19,
+        user: "Lisa"
     },
     {
-        name: 'Activity 4',
-        classTime: 20,
-        startTime: '8:30 pm',
-        classSize: 20
+        name: 'Mindful Movement',
+        classTime: 35,
+        startTime: '8:00 pm',
+        classSize: 14,
+        user: "George"
     }
 ]
 
@@ -57,17 +61,17 @@ class ScheduleList extends Component {
         return (
             <div>
                 <h3>Today</h3>
-                {schedule.map( ({name, classSize, classTime}, index) => (
+                {schedule.map( ({name, classSize, classTime, startTime, user}, index) => (
                 <div style={{backgroundColor: index % 2 !== 0 ? '#6194EB': '#c3d6e7'}} >
                     <table style={{...sessionTableEven, ...sessionTableTimeTd, background: index % 2 !== 0 ? '#6194EB': '#c3d6e7'}}></table>
                     <table style={{...sessionTableEven, background: index % 2 !== 0 ? '#6194EB': ''}}>
-                    
+
                             <tr>
-                                <td style={{...sessionTableTd, ...sessionTableNameTd, background: index % 2 !== 0 ? '#6194EB': '#c3d6e7'}}>{name} (15 mins)</td>
-                                <td style={{...sessionTableTd, ...sessionTableTimeTd, background: index % 2 !== 0 ? '#6194EB': '#c3d6e7'}} rowspan="2">05:30 PM</td>
+                                <td style={{...sessionTableTd, ...sessionTableNameTd, background: index % 2 !== 0 ? '#6194EB': '#c3d6e7'}}>{name} ({classTime} mins)</td>
+                                <td style={{...sessionTableTd, ...sessionTableTimeTd, background: index % 2 !== 0 ? '#6194EB': '#c3d6e7'}} rowspan="2">{startTime}</td>
                             </tr>
                             <tr>
-                                <td style={sessionTableTd}>Avatar <span style={userCountSpanIcon}><Group /></span>23</td>
+                                <td style={sessionTableTd}>{user} <span style={userCountSpanIcon}><Group /></span>{classSize}</td>
                             </tr>
                     </table>
                 </div>
