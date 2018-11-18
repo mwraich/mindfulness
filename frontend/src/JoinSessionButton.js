@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Grommet, Box, Button, Clock } from 'grommet';
-import { Up } from 'grommet-icons';
+import { Grommet, Box, Button } from 'grommet';
 
 const theme = {
   global: {
@@ -14,26 +13,27 @@ const theme = {
   },
 };
 
-class ScheduleForLater extends Component {
+class StartNow extends Component {
     render(){
         return (
             <Grommet theme={theme}>
-            <Box align="center" border="grey">
-              Set a time: <Clock
-               precision="minutes"
-               type="digital" />
-              <Button icon={<Up />}/>
-            </Box>
+            <div
+              style={{
+                height: "40px"
+              }}
+              >
+            </div>
             <Box background="grey" align="center">
               <h2
               style={{
                 color: "white"
               }}
-              > Schedule For Later </h2>
+              > Join Session </h2>
             </Box>
+
             </ Grommet >
         )
     }
 }
 
-export default ScheduleForLater
+export default StartNow

@@ -5,7 +5,10 @@
   "dependencies": {
     "grommet": "^2.0.1",
     "grommet-icons": "^3.2.1",
+    "moment": "^2.22.2",
+    "rc-time-picker": "^3.4.0",
     "react": "^16.6.3",
+    "react-datetime": "^2.16.2",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1",
     "styled-components": "^4.1.1"

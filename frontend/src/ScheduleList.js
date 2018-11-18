@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Group } from 'grommet-icons'
+import JoinSessionButton from './JoinSessionButton'
 
 const schedule = [
     {
@@ -71,6 +72,7 @@ class ScheduleList extends Component {
                     </table>
                 </div>
                 ))}
+                <JoinSessionButton />
             </div>
         )
     }
