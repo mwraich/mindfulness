@@ -26,7 +26,7 @@ class CategoryButton extends Component {
             <Grommet theme={theme}>
               <h3
                 style={{
-                  paddingTop: "55px",
+                  paddingTop: "1em",
                   paddingLeft: "40px"
                 }}
                 >

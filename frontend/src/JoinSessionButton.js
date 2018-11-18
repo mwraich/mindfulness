@@ -17,11 +17,7 @@ class StartNow extends Component {
     render(){
         return (
             <Grommet theme={theme}>
-            <div
-              style={{
-                height: "40px"
-              }}
-              >
+            <div>
             </div>
             <Box background="grey" align="center">
               <h2
