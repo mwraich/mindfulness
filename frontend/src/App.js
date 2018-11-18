@@ -3,7 +3,6 @@ import HomePage from './HomePage'
 import CreateSession from './CreateSession'
 import JoinSession from './JoinSession'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUsers } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faUsers)

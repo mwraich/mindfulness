@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Button } from 'grommet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const schedule = [
