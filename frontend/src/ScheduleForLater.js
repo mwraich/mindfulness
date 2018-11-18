@@ -24,13 +24,6 @@ class ScheduleForLater extends Component {
                type="digital" />
               <Button icon={<Up />}/>
             </Box>
-            <Box background="grey" align="center">
-              <h2
-              style={{
-                color: "white"
-              }}
-              > Schedule For Later </h2>
-            </Box>
             </ Grommet >
         )
     }

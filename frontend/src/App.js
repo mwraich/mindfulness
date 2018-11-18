@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div>
         { componentToShow === 'homepage' && <HomePage startJourney={this.startJourney} /> }
-        { componentToShow === 'createSession' && <CreateSession/> }
+        { componentToShow === 'createSession' && <CreateSession startJourney={this.startJourney}/> }
         { componentToShow === 'joinSession' && <JoinSession/> }
         { componentToShow === 'profile' && <Profile/> }
       </div>

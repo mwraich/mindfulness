@@ -13,13 +13,24 @@ const theme = {
     },
     font: {
       family: 'Poppins',
-      size: '20px'
+      size: '20px',
+      color: 'white',
     },
   },
 };
 
+const AppBar = (props) => (
+  <Box
+    tag='h2'
+    background='grey'
+    align='center'
+    style={{ zIndex: '100', color: '#fff', padding: '20px' }}
+    {...props}
+  />
+);
+
 class CreateSession extends Component {
-    render(){
+    render(){ 
       return(
         <React.Fragment>
             <CategoryButton/>
@@ -27,6 +38,9 @@ class CreateSession extends Component {
             <ShareExperience/>
             <StartNow/>
             <ScheduleForLater/>
+            <AppBar onClick={() => this.props.startJourney('profile')}>
+            Schedule for Later
+            </AppBar>
         </React.Fragment>
         )
     }
