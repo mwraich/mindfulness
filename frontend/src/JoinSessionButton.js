@@ -28,6 +28,8 @@ class StartNow extends Component {
               style={{
                 color: "white"
               }}
+              onClick={() => this.props.startJourney('profile')}
+
               > Join Session </h2>
             </Box>
 

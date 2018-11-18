@@ -18,9 +18,12 @@ class Profile extends Component {
     render(){
       return(
         <Grommet theme={theme} full>
+          <div onClick={() => this.props.startJourney('homepage')}>
           <img src={profilePage}
             width="100%"
             alt="User"/>
+          </div>
+
         </Grommet>
         )
     }

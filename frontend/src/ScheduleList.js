@@ -72,7 +72,7 @@ class ScheduleList extends Component {
                     </table>
                 </div>
                 ))}
-                <JoinSessionButton />
+                <JoinSessionButton startJourney={this.props.startJourney} />
             </div>
         )
     }

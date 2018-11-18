@@ -23,7 +23,7 @@ class JoinSession extends Component {
           <React.Fragment>
             <CategoryButton />
             <ProductSelecta /> 
-            <ScheduleList />
+            <ScheduleList startJourney={this.props.startJourney} />
           </React.Fragment>
         )
     }

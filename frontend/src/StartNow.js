@@ -28,6 +28,7 @@ class StartNow extends Component {
               style={{
                 color: "white"
               }}
+              onClick={() => this.props.startJourney('activityPage')}
               > Start Now </h2>
             </Box>
             <h4

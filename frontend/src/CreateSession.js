@@ -36,7 +36,7 @@ class CreateSession extends Component {
             <CategoryButton/>
             <ProductSelecta />
             <ShareExperience/>
-            <StartNow/>
+            <StartNow startJourney={this.props.startJourney}/>
             <ScheduleForLater/>
             <AppBar onClick={() => this.props.startJourney('profile')}>
             Schedule for Later
