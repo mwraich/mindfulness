@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { Grommet, Box, Button } from 'grommet';
 import ActivityPage from './ActivityPage.png'
+import CategoryButton from './CategoryButtons'
+import ProductSelecta from './ProductSelecta'
+import ScheduleList from './ScheduleList'
 
 const theme = {
   global: {
@@ -17,9 +20,11 @@ const theme = {
 class JoinSession extends Component {
     render(){
         return (
-              <Grommet theme={theme} full>
-                <img src={ActivityPage} alt="User"/>
-                </Grommet>
+          <React.Fragment>
+            <CategoryButton />
+            <ProductSelecta /> 
+            <ScheduleList />
+          </React.Fragment>
         )
     }
 }
