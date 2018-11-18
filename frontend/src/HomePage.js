@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Grommet, Box, Button } from 'grommet';
 import { User } from 'grommet-icons';
-
 import logo from './logo.jpg'
 
 const theme = {
@@ -37,7 +36,10 @@ class HomePage extends Component {
       <Box fill>
           <AppBar>
             <img src={logo} alt="User" width="150" height="90" />
-          <Button icon={<User />}/>
+          <Button
+            icon={<User />}
+            onClick={() => this.props.startJourney('Profile')}
+            />
           </AppBar>
 
         <Box
@@ -54,7 +56,6 @@ class HomePage extends Component {
           color="neutral-4"
           label="Create Session"
           fill
-          onClick={() => this.props.startJourney('createSession')}
           style={{
             width: '90%',
             color: 'white'
@@ -89,4 +90,3 @@ class HomePage extends Component {
 }
 
 export default HomePage;
-
